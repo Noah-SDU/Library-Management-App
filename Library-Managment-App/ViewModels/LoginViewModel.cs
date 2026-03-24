@@ -8,12 +8,12 @@ namespace Library_Managment_App.ViewModels;
 public class LoginViewModel : ViewModelBase
 {
     private readonly AuthService _authService;
+
     private string _username = string.Empty;
     private string _password = string.Empty;
     private string _selectedRole = "Member";
     private string? _errorMessage;
 
-    
     private static readonly IReadOnlyDictionary<string, string> RoleToBackground =
         new Dictionary<string, string>(StringComparer.Ordinal)
         {
@@ -34,11 +34,6 @@ public class LoginViewModel : ViewModelBase
             ["Member"] = Role.Member,
             ["Librarian"] = Role.Librarian
         };
-
-    private string GetColor(IReadOnlyDictionary<string, string> map, string fallback)
-    {
-        return map.TryGetValue(SelectedRole, out var color) ? color : fallback;
-    }
 
     public event EventHandler<AuthResult>? LoginSucceeded;
 
@@ -119,5 +114,10 @@ public class LoginViewModel : ViewModelBase
 
         ErrorMessage = null;
         LoginSucceeded?.Invoke(this, result);
+    }
+
+    private string GetColor(IReadOnlyDictionary<string, string> map, string fallback)
+    {
+        return map.TryGetValue(SelectedRole, out var color) ? color : fallback;
     }
 }

@@ -4,7 +4,7 @@
       "id": 1,
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
-      "isbn": "",
+      "isbn": "9780000000019",
       "description": "",
       "genre": "",
       "yearPublished": null,
@@ -14,7 +14,7 @@
       "id": 2,
       "title": "1984",
       "author": "George Orwell",
-      "isbn": "",
+      "isbn": "9780000000026",
       "description": "",
       "genre": "",
       "yearPublished": null,
@@ -24,7 +24,27 @@
       "id": 3,
       "title": "Clean Code",
       "author": "Robert C. Martin",
-      "isbn": "",
+      "isbn": "9780000000033",
+      "description": "",
+      "genre": "",
+      "yearPublished": null,
+      "totalCopies": 1
+    },
+    {
+      "id": 4,
+      "title": "Harry Potter and the Philosopher\u0027s Stone",
+      "author": "J. K. Rowling",
+      "isbn": "9780000000040",
+      "description": "",
+      "genre": "",
+      "yearPublished": null,
+      "totalCopies": 4
+    },
+    {
+      "id": 5,
+      "title": "Death Note",
+      "author": "Light Yagami",
+      "isbn": "9780000000077",
       "description": "",
       "genre": "",
       "yearPublished": null,
@@ -43,6 +63,103 @@
       "password": "password2"
     }
   ],
-  "loans": [],
+  "loans": [
+    {
+      "id": 0,
+      "bookId": 4,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T17:36:45.7662141Z",
+      "returnedAt": "2026-03-24T17:48:47.2171432Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T17:54:10.3823889Z",
+      "returnedAt": "2026-03-24T17:58:26.973586Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 2,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T17:54:16.3490767Z",
+      "returnedAt": "2026-03-24T17:58:08.388477Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 4,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T17:56:49.3644691Z",
+      "returnedAt": "2026-03-24T17:58:07.0373367Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T17:58:30.0525845Z",
+      "returnedAt": "2026-03-24T18:01:02.8305969Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 3,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T18:00:52.2254831Z",
+      "returnedAt": "2026-03-24T18:01:11.3409181Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 3,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T18:01:17.7086049Z",
+      "returnedAt": "2026-03-24T18:04:31.1684053Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T18:04:25.7207084Z",
+      "returnedAt": "2026-03-24T18:04:36.3813106Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 2,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T18:04:25.7207103Z",
+      "returnedAt": "2026-03-24T18:04:36.3813083Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T18:09:31.7136362Z",
+      "returnedAt": "2026-03-24T18:09:44.3689252Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 2,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T18:09:31.713639Z",
+      "returnedAt": "2026-03-24T18:09:44.3689159Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 2,
+      "memberId": 1,
+      "borrowedAt": "2026-03-24T18:09:54.0206566Z",
+      "returnedAt": null,
+      "isActive": true
+    }
+  ],
   "ratings": []
 }

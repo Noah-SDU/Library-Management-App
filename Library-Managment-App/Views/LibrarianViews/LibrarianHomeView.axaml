@@ -1,7 +1,9 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Library_Managment_App.ViewModels"
              xmlns:librarianViews="using:Library_Managment_App.Views.LibrarianViews"
-             x:Class="Library_Managment_App.Views.LibrarianViews.LibrarianHomeView">
+             x:Class="Library_Managment_App.Views.LibrarianViews.LibrarianHomeView"
+             x:DataType="vm:LibrarianHomeViewModel">
 
     <Border Background="#BEC5A4" BorderBrush="#8A8E75" BorderThickness="3" CornerRadius="14" Padding="24">
         <TabControl>
@@ -14,14 +16,14 @@
                         <Border Grid.Column="0" Background="#8A8E75" BorderBrush="#BEC5A4" BorderThickness="2" CornerRadius="10" Padding="12">
                             <StackPanel Spacing="4">
                                 <TextBlock Text="Overdue Loans" FontWeight="SemiBold"/>
-                                <TextBlock Text="0" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding ActiveLoans.OverdueLoanCount}" FontSize="24" FontWeight="Bold"/>
                             </StackPanel>
                         </Border>
 
                         <Border Grid.Column="2" Background="#8A8E75" BorderBrush="#BEC5A4" BorderThickness="2" CornerRadius="10" Padding="12">
                             <StackPanel Spacing="4">
                                 <TextBlock Text="Pending Returns" FontWeight="SemiBold"/>
-                                <TextBlock Text="0" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding ActiveLoans.ActiveLoanCount}" FontSize="24" FontWeight="Bold"/>
                             </StackPanel>
                         </Border>
                     </Grid>
@@ -29,11 +31,11 @@
             </TabItem>
 
             <TabItem Header="Active Loans">
-                <librarianViews:ActiveLoansView/>
+                <librarianViews:ActiveLoansView DataContext="{Binding ActiveLoans}"/>
             </TabItem>
 
             <TabItem Header="Full Catalog">
-                <librarianViews:FullCatalogView/>
+                <librarianViews:FullCatalogView DataContext="{Binding Catalog}"/>
             </TabItem>
         </TabControl>
     </Border>

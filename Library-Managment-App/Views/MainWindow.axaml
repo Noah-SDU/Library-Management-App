@@ -27,8 +27,35 @@
 
         <Border IsVisible="{Binding ShowMainPanel}" Padding="24">
             <Grid>
-                <memberViews:MemberHomeView IsVisible="{Binding ShowMemberPanel}"/>
-                <librarianViews:LibrarianHomeView IsVisible="{Binding ShowLibrarianPanel}"/>
+                <Border IsVisible="{Binding ShowMemberPanel}">
+                    <Grid RowDefinitions="Auto,*" RowSpacing="10">
+                        <Button Grid.Row="0"
+                                Content="Return to Login"
+                                HorizontalAlignment="Right"
+                                Padding="14,8"
+                                FontWeight="SemiBold"
+                                Background="#C5B8A1"
+                                BorderBrush="#F1EAD8"
+                                BorderThickness="2"
+                                Command="{Binding ReturnToLoginCommand}"/>
+                        <memberViews:MemberHomeView Grid.Row="1" DataContext="{Binding MemberHome}"/>
+                    </Grid>
+                </Border>
+
+                <Border IsVisible="{Binding ShowLibrarianPanel}">
+                    <Grid RowDefinitions="Auto,*" RowSpacing="10">
+                        <Button Grid.Row="0"
+                                Content="Return to Login"
+                                HorizontalAlignment="Right"
+                                Padding="14,8"
+                                FontWeight="SemiBold"
+                                Background="#8A8E75"
+                                BorderBrush="#BEC5A4"
+                                BorderThickness="2"
+                                Command="{Binding ReturnToLoginCommand}"/>
+                        <librarianViews:LibrarianHomeView Grid.Row="1" DataContext="{Binding LibrarianHome}"/>
+                    </Grid>
+                </Border>
             </Grid>
         </Border>
     </Grid>

@@ -1,27 +1,29 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Library_Managment_App.ViewModels"
              xmlns:memberViews="using:Library_Managment_App.Views.MemberViews"
-             x:Class="Library_Managment_App.Views.MemberViews.MemberHomeView">
+             x:Class="Library_Managment_App.Views.MemberViews.MemberHomeView"
+             x:DataType="vm:MemberHomeViewModel">
 
     <Border Background="#F1EAD8" BorderBrush="#C5B8A1" BorderThickness="3" CornerRadius="14" Padding="24">
         <TabControl>
             <TabItem Header="Overview">
                 <StackPanel Spacing="14" Margin="0,8,0,0">
                     <TextBlock Text="Member Dashboard" FontSize="28" FontWeight="Bold"/>
-                    <TextBlock Text="Browse books, manage your loans, and check your reading history." FontSize="16" TextWrapping="Wrap"/>
+                    <TextBlock Text="Browse books, manage your loans and rate your read titles." FontSize="16" TextWrapping="Wrap"/>
 
                     <Grid ColumnDefinitions="*,12,*" Margin="0,6,0,0">
                         <Border Grid.Column="0" Background="#C5B8A1" CornerRadius="10" Padding="12">
                             <StackPanel Spacing="4">
                                 <TextBlock Text="Current Loans" FontWeight="SemiBold"/>
-                                <TextBlock Text="0" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding CurrentLoansCount}" FontSize="24" FontWeight="Bold"/>
                             </StackPanel>
                         </Border>
 
                         <Border Grid.Column="2" Background="#C5B8A1" CornerRadius="10" Padding="12">
                             <StackPanel Spacing="4">
                                 <TextBlock Text="Books Rated" FontWeight="SemiBold"/>
-                                <TextBlock Text="0" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding BooksRatedCount}" FontSize="24" FontWeight="Bold"/>
                             </StackPanel>
                         </Border>
                     </Grid>
@@ -29,11 +31,11 @@
             </TabItem>
 
             <TabItem Header="Library Catalog">
-                <memberViews:LibraryCatalogView/>
+                <memberViews:LibraryCatalogView DataContext="{Binding Catalog}"/>
             </TabItem>
 
             <TabItem Header="My Loans">
-                <memberViews:MyLoansView/>
+                <memberViews:MyLoansView DataContext="{Binding MyLoans}"/>
             </TabItem>
         </TabControl>
     </Border>

@@ -6,7 +6,7 @@ public static class LibraryStartup
 {
     public static async Task<LibraryState> LoadOrSeedAsync(ILibraryRepository repo)
     {
-        var state = await repo.LoadAsync();
+        var state = await repo.LoadAsync().ConfigureAwait(false);
 
         bool seeded = false;
 
@@ -26,7 +26,7 @@ public static class LibraryStartup
 
         if (seeded)
         {
-            await repo.SaveAsync(state);
+            await repo.SaveAsync(state).ConfigureAwait(false);
         }
 
         return state;

@@ -142,6 +142,15 @@ public class LibraryService
         return rating?.RatingStars;
     }
 
+    public int GetRatedBooksCount(int memberId)
+    {
+        return _state.Ratings
+            .Where(r => r.MemberId == memberId)
+            .Select(r => r.BookId)
+            .Distinct()
+            .Count();
+    }
+
     public int GetAvailableCopies(int bookId)
     {
         var book = _state.Books.FirstOrDefault(b => b.Id == bookId);

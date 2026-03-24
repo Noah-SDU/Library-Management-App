@@ -1,19 +1,41 @@
 <UserControl xmlns="https://github.com/avaloniaui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 x:Class="Library_Managment_App.Views.MemberViews.LibraryCatalogView">
+			 xmlns:vm="using:Library_Managment_App.ViewModels"
+			 x:Class="Library_Managment_App.Views.MemberViews.LibraryCatalogView"
+			 x:DataType="vm:CatalogViewModel"
+			 x:CompileBindings="False">
 
 	<Border Background="#C5B8A1" CornerRadius="10" Padding="16" Margin="0,8,0,0">
 		<StackPanel Spacing="10">
 			<TextBlock Text="Library Catalog" FontSize="22" FontWeight="Bold"/>
-			<TextBlock Text="Find books by title, author, or genre." FontSize="14"/>
+			<TextBlock Text="Find books by title, author, or ISBN." FontSize="14"/>
 
-			<TextBox Watermark="Search catalog..." />
+			<TextBox Text="{Binding SearchText}" Watermark="Search catalog..." />
+			<Button Content="Borrow Selected" Command="{Binding BorrowSelectedBookCommand}" HorizontalAlignment="Left" Padding="14,6"/>
+			<TextBlock Text="{Binding StatusMessage}" FontSize="13"/>
 
 			<Border Background="#F1EAD8" BorderBrush="#C5B8A1" BorderThickness="1" CornerRadius="8" Padding="12">
-				<StackPanel Spacing="6">
-					<TextBlock Text="No books loaded yet." FontWeight="SemiBold"/>
-					<TextBlock Text="Catalog results will appear here." FontSize="13"/>
-				</StackPanel>
+				<Grid RowDefinitions="Auto,*" RowSpacing="8">
+					<TextBlock Grid.Row="0" Text="Available books" FontWeight="SemiBold"/>
+					<ListBox Grid.Row="1"
+							 ItemsSource="{Binding MemberCatalogBooks}"
+							 SelectedItem="{Binding SelectedMemberBook}"
+							 SelectedItems="{Binding SelectedMemberBooks}"
+							 MaxHeight="320"
+							 ScrollViewer.VerticalScrollBarVisibility="Visible"
+							 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+							 SelectionMode="Multiple,Toggle">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Spacing="2">
+									<TextBlock Text="{Binding Title}" FontWeight="SemiBold"/>
+									<TextBlock Text="{Binding Author}" FontSize="13"/>
+									<TextBlock Text="{Binding ISBN, StringFormat='ISBN: {0}'}" FontSize="12"/>
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</Grid>
 			</Border>
 		</StackPanel>
 	</Border>

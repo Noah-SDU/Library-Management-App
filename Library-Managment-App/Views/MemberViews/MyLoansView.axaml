@@ -1,11 +1,31 @@
 <UserControl xmlns="https://github.com/avaloniaui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:vm="using:Library_Managment_App.ViewModels"
+			 x:DataType="vm:MyLoansViewModel"
+			 x:CompileBindings="False"
 			 x:Class="Library_Managment_App.Views.MemberViews.MyLoansView">
 
 	<Border Background="#C5B8A1" CornerRadius="10" Padding="16" Margin="0,8,0,0">
-		<StackPanel Spacing="6">
+		<StackPanel Spacing="10">
 			<TextBlock Text="Active Loans" FontSize="20" FontWeight="Bold"/>
-			<TextBlock Text="No active loans yet." FontSize="14"/>
+			<TextBlock IsVisible="{Binding NoLoans}" Text="No active books on loan yet." FontSize="14"/>
+
+			<ListBox IsVisible="{Binding HasLoans}" ItemsSource="{Binding Loans}" SelectedItem="{Binding SelectedLoan}" SelectedItems="{Binding SelectedLoans}" SelectionMode="Multiple,Toggle">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+							<StackPanel Spacing="2">
+								<TextBlock Text="{Binding BookTitle}" FontWeight="SemiBold"/>
+								<TextBlock Text="{Binding BookIsbn, StringFormat='ISBN: {0}'}" FontSize="12"/>
+							</StackPanel>
+							<TextBlock Grid.Column="1" Text="{Binding BorrowedAtText}" FontSize="12" VerticalAlignment="Center"/>
+						</Grid>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+
+			<Button Content="Return Selected Books" Command="{Binding ReturnSelectedBooksCommand}" HorizontalAlignment="Left" Padding="14,6"/>
+			<TextBlock Text="{Binding StatusMessage}" FontSize="13"/>
 		</StackPanel>
 	</Border>
 </UserControl>

@@ -25,7 +25,7 @@ public class JsonLibraryRepository : ILibraryRepository
             return new LibraryState();
         }
 
-        var json = await File.ReadAllTextAsync(_filePath);
+        var json = await File.ReadAllTextAsync(_filePath).ConfigureAwait(false);
         if(string.IsNullOrWhiteSpace(json))
         {
             return new LibraryState();
@@ -36,6 +36,6 @@ public class JsonLibraryRepository : ILibraryRepository
     public async Task SaveAsync(LibraryState state)
     {
         var json = JsonSerializer.Serialize(state, _jsonOptions);
-        await File.WriteAllTextAsync(_filePath, json);
+        await File.WriteAllTextAsync(_filePath, json).ConfigureAwait(false);
     }
 }
