@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:librarianViews="using:Library_Managment_App.Views.LibrarianViews"
+             x:Class="Library_Managment_App.Views.LibrarianViews.LibrarianHomeView">
+
+    <Border Background="#BEC5A4" BorderBrush="#8A8E75" BorderThickness="3" CornerRadius="14" Padding="24">
+        <TabControl>
+            <TabItem Header="Overview">
+                <StackPanel Spacing="14" Margin="0,8,0,0">
+                    <TextBlock Text="Librarian Dashboard" FontSize="28" FontWeight="Bold"/>
+                    <TextBlock Text="Manage inventory, process returns, and maintain member records." FontSize="16" TextWrapping="Wrap"/>
+
+                    <Grid ColumnDefinitions="*,12,*" Margin="0,6,0,0">
+                        <Border Grid.Column="0" Background="#8A8E75" BorderBrush="#BEC5A4" BorderThickness="2" CornerRadius="10" Padding="12">
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="Overdue Loans" FontWeight="SemiBold"/>
+                                <TextBlock Text="0" FontSize="24" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Grid.Column="2" Background="#8A8E75" BorderBrush="#BEC5A4" BorderThickness="2" CornerRadius="10" Padding="12">
+                            <StackPanel Spacing="4">
+                                <TextBlock Text="Pending Returns" FontWeight="SemiBold"/>
+                                <TextBlock Text="0" FontSize="24" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Active Loans">
+                <librarianViews:ActiveLoansView/>
+            </TabItem>
+
+            <TabItem Header="Full Catalog">
+                <librarianViews:FullCatalogView/>
+            </TabItem>
+        </TabControl>
+    </Border>
+</UserControl>

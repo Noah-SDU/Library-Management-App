@@ -26,8 +26,26 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LibrarianViews/ActiveLoansView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LibrarianViews/FullCatalogView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LibrarianViews/LibrarianHomeView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LoginView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MemberViews/LibraryCatalogView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MemberViews/MemberHomeView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MemberViews/MyLoansView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

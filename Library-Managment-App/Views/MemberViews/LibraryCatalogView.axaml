@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="Library_Managment_App.Views.MemberViews.LibraryCatalogView">
+
+	<Border Background="#C5B8A1" CornerRadius="10" Padding="16" Margin="0,8,0,0">
+		<StackPanel Spacing="10">
+			<TextBlock Text="Library Catalog" FontSize="22" FontWeight="Bold"/>
+			<TextBlock Text="Find books by title, author, or genre." FontSize="14"/>
+
+			<TextBox Watermark="Search catalog..." />
+
+			<Border Background="#F1EAD8" BorderBrush="#C5B8A1" BorderThickness="1" CornerRadius="8" Padding="12">
+				<StackPanel Spacing="6">
+					<TextBlock Text="No books loaded yet." FontWeight="SemiBold"/>
+					<TextBlock Text="Catalog results will appear here." FontSize="13"/>
+				</StackPanel>
+			</Border>
+		</StackPanel>
+	</Border>
+</UserControl>

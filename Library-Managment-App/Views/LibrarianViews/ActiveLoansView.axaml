@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 x:Class="Library_Managment_App.Views.LibrarianViews.ActiveLoansView">
+
+	<Border Background="#8A8E75" BorderBrush="#BEC5A4" BorderThickness="2" CornerRadius="10" Padding="16" Margin="0,8,0,0">
+		<StackPanel Spacing="6">
+			<TextBlock Text="Active Loans" FontSize="20" FontWeight="Bold"/>
+			<TextBlock Text="No active loans are currently registered." FontSize="14"/>
+		</StackPanel>
+	</Border>
+</UserControl>

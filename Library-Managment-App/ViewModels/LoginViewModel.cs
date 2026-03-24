@@ -8,11 +8,37 @@ namespace Library_Managment_App.ViewModels;
 public class LoginViewModel : ViewModelBase
 {
     private readonly AuthService _authService;
-
     private string _username = string.Empty;
     private string _password = string.Empty;
     private string _selectedRole = "Member";
     private string? _errorMessage;
+
+    
+    private static readonly IReadOnlyDictionary<string, string> RoleToBackground =
+        new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["Member"] = "#F1EAD8",
+            ["Librarian"] = "#BEC5A4"
+        };
+
+    private static readonly IReadOnlyDictionary<string, string> RoleToBorder =
+        new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["Member"] = "#C5B8A1",
+            ["Librarian"] = "#8A8E75"
+        };
+
+    private static readonly IReadOnlyDictionary<string, Role> RoleMap =
+        new Dictionary<string, Role>(StringComparer.Ordinal)
+        {
+            ["Member"] = Role.Member,
+            ["Librarian"] = Role.Librarian
+        };
+
+    private string GetColor(IReadOnlyDictionary<string, string> map, string fallback)
+    {
+        return map.TryGetValue(SelectedRole, out var color) ? color : fallback;
+    }
 
     public event EventHandler<AuthResult>? LoginSucceeded;
 
@@ -39,8 +65,24 @@ public class LoginViewModel : ViewModelBase
     public string SelectedRole
     {
         get => _selectedRole;
-        set => SetProperty(ref _selectedRole, value);
+        set
+        {
+            if (!SetProperty(ref _selectedRole, value))
+            {
+                return;
+            }
+
+            OnPropertyChanged(nameof(LoginBackground));
+            OnPropertyChanged(nameof(LoginBorderBrush));
+            OnPropertyChanged(nameof(LoginButtonBackground));
+        }
     }
+
+    public string LoginBackground => GetColor(RoleToBackground, "#F1EAD8");
+
+    public string LoginBorderBrush => GetColor(RoleToBorder, "#C5B8A1");
+
+    public string LoginButtonBackground => GetColor(RoleToBorder, "#C5B8A1");
 
     public ICommand LoginCommand { get; }
 
@@ -66,7 +108,9 @@ public class LoginViewModel : ViewModelBase
             return;
         }
 
-        var expectedRole = SelectedRole == "Librarian" ? Role.Librarian : Role.Member;
+        var expectedRole = RoleMap.TryGetValue(SelectedRole, out var mappedRole)
+            ? mappedRole
+            : Role.Member;
         if (result.Role != expectedRole)
         {
             ErrorMessage = "Those credentials belong to a different account.";

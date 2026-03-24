@@ -9,17 +9,17 @@
 			d:DesignWidth="420"
 			d:DesignHeight="320">
 
-	<Border Padding="20" Width="420" Background="#BEC5A4" BorderBrush="#8A8E75" BorderThickness="5" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+	<Border Padding="20" Width="420" Background="{Binding LoginBackground}" BorderBrush="{Binding LoginBorderBrush}" BorderThickness="5" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center">
 		<StackPanel VerticalAlignment="Center" Spacing="2">
 			<TextBlock Text="Login" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,8"/>
 			<TextBlock Text="Role" FontWeight="SemiBold"/>
 			<ComboBox ItemsSource="{Binding RoleChoices}" SelectedItem="{Binding SelectedRole, Mode=TwoWay}" Margin="0,0,0,8"/>
 			<TextBlock Text="Username" FontWeight="SemiBold"/>
-			<TextBox Text="{Binding Username, Mode=TwoWay}" Watermark="Enter username" Margin="0,0,0,8"/>
+			<TextBox Text="{Binding Username, Mode=TwoWay}" Watermark="Enter username" BorderThickness="2" Margin="0,0,0,8"/>
 			<TextBlock Text="Password" FontWeight="SemiBold"/>
-			<TextBox Text="{Binding Password, Mode=TwoWay}" Watermark="Enter password" Margin="0,0,0,8"/>
-			<TextBlock Text="{Binding ErrorMessage}" Foreground="#68604D" TextWrapping="Wrap" Margin="0,0,0,8"/>
-			<Button Content="Enter"  FontSize="24" FontWeight="SemiBold" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Command="{Binding LoginCommand}"/>
+			<TextBox Text="{Binding Password, Mode=TwoWay}" Watermark="Enter password" BorderThickness="2" Margin="0,0,0,8"/>
+			<TextBlock Text="{Binding ErrorMessage}" Foreground="#262527" TextWrapping="Wrap" Margin="0,0,0,8"/>
+			<Button Content="Enter"  FontSize="24" FontWeight="SemiBold" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Background="{Binding LoginButtonBackground}" Foreground="#262527" Command="{Binding LoginCommand}"/>
 		</StackPanel>
 	</Border>
 </UserControl>

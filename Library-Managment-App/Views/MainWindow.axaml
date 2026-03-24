@@ -2,6 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Library_Managment_App.ViewModels"
     xmlns:views="using:Library_Managment_App.Views"
+    xmlns:memberViews="using:Library_Managment_App.Views.MemberViews"
+    xmlns:librarianViews="using:Library_Managment_App.Views.LibrarianViews"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -9,7 +11,8 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Library-Managment-App"
-        Background="#D5C7AD">
+        Background="{Binding WindowBackground}"
+        Foreground="#262527">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -23,7 +26,10 @@
         </Border>
 
         <Border IsVisible="{Binding ShowMainPanel}" Padding="24">
-            <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Grid>
+                <memberViews:MemberHomeView IsVisible="{Binding ShowMemberPanel}"/>
+                <librarianViews:LibrarianHomeView IsVisible="{Binding ShowLibrarianPanel}"/>
+            </Grid>
         </Border>
     </Grid>
 

@@ -7,9 +7,9 @@ public class AuthService
     private readonly LibraryState _state;
     
     private const string LibrarianUsername = "librarian";
-    private const string LibrarianPassword = "admin";
+    private const string LibrarianPassword = "1";
     private const string MemberUsername = "member";
-    private const string MemberPassword = "member123";
+    private const string MemberPassword = "2";
 
     public AuthService(LibraryState state)
     {
