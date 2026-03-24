@@ -31,11 +31,12 @@
                     <Grid RowDefinitions="Auto,*" RowSpacing="10">
                         <Button Grid.Row="0"
                                 Content="Return to Login"
-                                HorizontalAlignment="Right"
+                                FontSize="24"
+                                HorizontalAlignment="Left"
                                 Padding="14,8"
                                 FontWeight="SemiBold"
-                                Background="#C5B8A1"
-                                BorderBrush="#F1EAD8"
+                                Background="#F1EAD8"
+                                BorderBrush="#C5B8A1"
                                 BorderThickness="2"
                                 Command="{Binding ReturnToLoginCommand}"/>
                         <memberViews:MemberHomeView Grid.Row="1" DataContext="{Binding MemberHome}"/>
@@ -46,11 +47,12 @@
                     <Grid RowDefinitions="Auto,*" RowSpacing="10">
                         <Button Grid.Row="0"
                                 Content="Return to Login"
-                                HorizontalAlignment="Right"
+                                FontSize="24"
+                                HorizontalAlignment="Left"
                                 Padding="14,8"
                                 FontWeight="SemiBold"
-                                Background="#8A8E75"
-                                BorderBrush="#BEC5A4"
+                                Background="#BEC5A4"
+                                BorderBrush="#8A8E75"
                                 BorderThickness="2"
                                 Command="{Binding ReturnToLoginCommand}"/>
                         <librarianViews:LibrarianHomeView Grid.Row="1" DataContext="{Binding LibrarianHome}"/>

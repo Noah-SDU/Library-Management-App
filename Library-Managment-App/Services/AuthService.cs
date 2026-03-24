@@ -5,11 +5,6 @@ namespace Library_Managment_App;
 public class AuthService
 {
     private readonly LibraryState _state;
-    
-    private const string LibrarianUsername = "librarian";
-    private const string LibrarianPassword = "1";
-    private const string MemberUsername = "member";
-    private const string MemberPassword = "2";
 
     public AuthService(LibraryState state)
     {
@@ -18,20 +13,16 @@ public class AuthService
 
     public AuthResult Authenticate(string username, string password)
     {
-        if (username == LibrarianUsername && password == LibrarianPassword)
-        {
-            return new AuthResult(true, Role.Librarian, null, null);
-        }
-
-        if (username == MemberUsername && password == MemberPassword)
-        {
-            return new AuthResult(true, Role.Member, 1, null);
-        }
-        
         var member = _state.Members.FirstOrDefault(m => m.Username == username && m.Password == password);
         if (member != null)
         {
             return new AuthResult(true, Role.Member, member.Id, null);
+        }
+
+        var librarian = _state.Librarians.FirstOrDefault(l => l.Username == username && l.Password == password);
+        if (librarian != null)
+        {
+            return new AuthResult(true, Role.Librarian, null, null);
         }
         
         return new AuthResult(false, null, null, "Invalid username or password.");

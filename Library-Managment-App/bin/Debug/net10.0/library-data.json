@@ -63,6 +63,13 @@
       "password": "password2"
     }
   ],
+  "librarians": [
+    {
+      "id": 1,
+      "username": "librarian",
+      "password": "l"
+    }
+  ],
   "loans": [
     {
       "id": 0,
@@ -157,6 +164,22 @@
       "bookId": 2,
       "memberId": 1,
       "borrowedAt": "2026-03-24T18:09:54.0206566Z",
+      "returnedAt": null,
+      "isActive": true
+    },
+    {
+      "id": 0,
+      "bookId": 2,
+      "memberId": 2,
+      "borrowedAt": "2026-03-24T19:01:12.3472257Z",
+      "returnedAt": null,
+      "isActive": true
+    },
+    {
+      "id": 0,
+      "bookId": 5,
+      "memberId": 2,
+      "borrowedAt": "2026-03-24T19:01:12.3472279Z",
       "returnedAt": null,
       "isActive": true
     }

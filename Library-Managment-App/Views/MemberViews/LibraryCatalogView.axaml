@@ -6,22 +6,24 @@
 			 x:CompileBindings="False">
 
 	<Border Background="#C5B8A1" CornerRadius="10" Padding="16" Margin="0,8,0,0">
-		<StackPanel Spacing="10">
-			<TextBlock Text="Library Catalog" FontSize="22" FontWeight="Bold"/>
-			<TextBlock Text="Find books by title, author, or ISBN." FontSize="14"/>
+		<Grid RowDefinitions="Auto,Auto,Auto,Auto,*" RowSpacing="10">
+			<TextBlock Grid.Row="0" Text="Library Catalog" FontSize="22" FontWeight="Bold"/>
+			<TextBlock Grid.Row="1" Text="Find books by title, author, or ISBN." FontSize="14"/>
 
-			<TextBox Text="{Binding SearchText}" Watermark="Search catalog..." />
-			<Button Content="Borrow Selected" Command="{Binding BorrowSelectedBookCommand}" HorizontalAlignment="Left" Padding="14,6"/>
-			<TextBlock Text="{Binding StatusMessage}" FontSize="13"/>
+			<TextBox Grid.Row="2" Text="{Binding SearchText}" Watermark="Search catalog..." />
 
-			<Border Background="#F1EAD8" BorderBrush="#C5B8A1" BorderThickness="1" CornerRadius="8" Padding="12">
+			<StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="8">
+				<Button Content="Borrow Selected" Command="{Binding BorrowSelectedBookCommand}" HorizontalAlignment="Left" Padding="14,6"/>
+				<TextBlock Text="{Binding StatusMessage}" FontSize="13" VerticalAlignment="Center"/>
+			</StackPanel>
+
+			<Border Grid.Row="4" Background="#F1EAD8" BorderBrush="#C5B8A1" BorderThickness="1" CornerRadius="8" Padding="12" MinHeight="220" MaxHeight="320">
 				<Grid RowDefinitions="Auto,*" RowSpacing="8">
 					<TextBlock Grid.Row="0" Text="Available books" FontWeight="SemiBold"/>
 					<ListBox Grid.Row="1"
 							 ItemsSource="{Binding MemberCatalogBooks}"
 							 SelectedItem="{Binding SelectedMemberBook}"
 							 SelectedItems="{Binding SelectedMemberBooks}"
-							 MaxHeight="320"
 							 ScrollViewer.VerticalScrollBarVisibility="Visible"
 							 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 							 SelectionMode="Multiple,Toggle">
@@ -37,6 +39,6 @@
 					</ListBox>
 				</Grid>
 			</Border>
-		</StackPanel>
+		</Grid>
 	</Border>
 </UserControl>
