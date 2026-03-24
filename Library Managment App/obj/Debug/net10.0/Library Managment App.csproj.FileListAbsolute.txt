@@ -73,3 +73,78 @@ C:\Users\nojus\OneDrive\Documents\Library-Management-App\Library Managment App\o
 C:\Users\nojus\OneDrive\Documents\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.pdb
 C:\Users\nojus\OneDrive\Documents\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.genruntimeconfig.cache
 C:\Users\nojus\OneDrive\Documents\Library-Management-App\Library Managment App\obj\Debug\net10.0\ref\Library Managment App.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.csproj.AssemblyReference.cache
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Avalonia\Resources.Inputs.cache
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Avalonia\resources
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.AssemblyInfoInputs.cache
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.AssemblyInfo.cs
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.csproj.CoreCompileInputs.cache
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.sourcelink.json
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\refint\Library Managment App.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.pdb
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Library Managment App.exe
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Library Managment App.deps.json
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Library Managment App.runtimeconfig.json
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Library Managment App.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Library Managment App.pdb
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Base.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Controls.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.DesignerSupport.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Dialogs.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Markup.Xaml.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Markup.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Metal.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.MicroCom.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.OpenGL.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Vulkan.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Controls.ColorPicker.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Desktop.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Diagnostics.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Fonts.Inter.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.FreeDesktop.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Native.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Remote.Protocol.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Skia.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Themes.Fluent.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Themes.Simple.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Win32.Automation.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.Win32.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Avalonia.X11.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\CommunityToolkit.Mvvm.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\HarfBuzzSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\MicroCom.Runtime.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\SkiaSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\Tmds.DBus.Protocol.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-arm64\native\av_libglesv2.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-x64\native\av_libglesv2.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-x86\native\av_libglesv2.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\osx\native\libAvaloniaNative.dylib
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-loongarch64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-musl-arm\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-musl-arm64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-musl-loongarch64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-musl-riscv64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-riscv64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-x86\native\libHarfBuzzSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\bin\Debug\net10.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library .581A44FD.Up2Date
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\Library Managment App.genruntimeconfig.cache
+C:\Users\avram\RiderProjects\Library\Library-Management-App\Library Managment App\obj\Debug\net10.0\ref\Library Managment App.dll
