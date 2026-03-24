@@ -8,6 +8,8 @@ public class AuthService
     
     private const string LibrarianUsername = "librarian";
     private const string LibrarianPassword = "admin";
+    private const string MemberUsername = "member";
+    private const string MemberPassword = "member123";
 
     public AuthService(LibraryState state)
     {
@@ -19,6 +21,11 @@ public class AuthService
         if (username == LibrarianUsername && password == LibrarianPassword)
         {
             return new AuthResult(true, Role.Librarian, null, null);
+        }
+
+        if (username == MemberUsername && password == MemberPassword)
+        {
+            return new AuthResult(true, Role.Member, 1, null);
         }
         
         var member = _state.Members.FirstOrDefault(m => m.Username == username && m.Password == password);
