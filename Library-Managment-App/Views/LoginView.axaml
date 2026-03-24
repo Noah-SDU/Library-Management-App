@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:vm="using:Library_Managment_App.ViewModels"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 x:Class="Library_Managment_App.Views.LoginView"
+			 x:DataType="vm:LoginViewModel"
+			 mc:Ignorable="d"
+			 d:DesignWidth="420"
+			 d:DesignHeight="320">
+</UserControl>
