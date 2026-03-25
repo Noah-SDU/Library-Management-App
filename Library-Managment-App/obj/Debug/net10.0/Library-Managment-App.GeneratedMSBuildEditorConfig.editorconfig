@@ -17,35 +17,35 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Library-Managment-App
-build_property.ProjectDir = C:\Users\nojus\OneDrive\Documents\Library-Management-App\Library-Managment-App\
+build_property.ProjectDir = C:\Users\avram\RiderProjects\Library\Library-Management-App\Library-Managment-App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/App.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LibrarianViews/ActiveLoansView.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/LibrarianViews/ActiveLoansView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LibrarianViews/FullCatalogView.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/LibrarianViews/FullCatalogView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LibrarianViews/LibrarianHomeView.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/LibrarianViews/LibrarianHomeView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/LoginView.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/LoginView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MainWindow.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MemberViews/LibraryCatalogView.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/MemberViews/LibraryCatalogView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MemberViews/MemberHomeView.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/MemberViews/MemberHomeView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/nojus/OneDrive/Documents/Library-Management-App/Library-Managment-App/Views/MemberViews/MyLoansView.axaml]
+[C:/Users/avram/RiderProjects/Library/Library-Management-App/Library-Managment-App/Views/MemberViews/MyLoansView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -222,6 +222,38 @@
       "borrowedAt": "2026-03-25T14:34:16.3754203Z",
       "returnedAt": null,
       "isActive": true
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T17:09:10.1428408Z",
+      "returnedAt": "2026-03-25T17:12:39.0143728Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T17:14:21.193977Z",
+      "returnedAt": "2026-03-25T17:14:26.3534305Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T17:14:28.6973608Z",
+      "returnedAt": "2026-03-25T17:14:31.0348499Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 6,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T17:29:24.7020364Z",
+      "returnedAt": "2026-03-25T17:34:51.2519988Z",
+      "isActive": false
     }
   ],
   "ratings": [
@@ -245,6 +277,13 @@
       "memberId": 2,
       "ratingStars": 2,
       "ratedAt": "2026-03-25T14:02:08.1872061Z"
+    },
+    {
+      "id": 4,
+      "bookId": 6,
+      "memberId": 1,
+      "ratingStars": 5,
+      "ratedAt": "2026-03-25T17:29:28.558905Z"
     }
   ]
 }
