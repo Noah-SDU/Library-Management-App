@@ -8,7 +8,7 @@
       "description": "",
       "genre": "",
       "yearPublished": null,
-      "totalCopies": 3
+      "totalCopies": 2
     },
     {
       "id": 2,
@@ -164,16 +164,16 @@
       "bookId": 2,
       "memberId": 1,
       "borrowedAt": "2026-03-24T18:09:54.0206566Z",
-      "returnedAt": null,
-      "isActive": true
+      "returnedAt": "2026-03-25T13:56:47.6314828Z",
+      "isActive": false
     },
     {
       "id": 0,
       "bookId": 2,
       "memberId": 2,
       "borrowedAt": "2026-03-24T19:01:12.3472257Z",
-      "returnedAt": null,
-      "isActive": true
+      "returnedAt": "2026-03-25T14:02:17.4816836Z",
+      "isActive": false
     },
     {
       "id": 0,
@@ -182,7 +182,69 @@
       "borrowedAt": "2026-03-24T19:01:12.3472279Z",
       "returnedAt": null,
       "isActive": true
+    },
+    {
+      "id": 0,
+      "bookId": 2,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T13:56:53.2194082Z",
+      "returnedAt": "2026-03-25T13:57:00.3305907Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T13:57:03.9648626Z",
+      "returnedAt": "2026-03-25T14:13:44.3996885Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 2,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T13:57:19.3305486Z",
+      "returnedAt": "2026-03-25T14:13:45.3568977Z",
+      "isActive": false
+    },
+    {
+      "id": 0,
+      "bookId": 1,
+      "memberId": 2,
+      "borrowedAt": "2026-03-25T14:02:25.1134256Z",
+      "returnedAt": null,
+      "isActive": true
+    },
+    {
+      "id": 0,
+      "bookId": 3,
+      "memberId": 1,
+      "borrowedAt": "2026-03-25T14:34:16.3754203Z",
+      "returnedAt": null,
+      "isActive": true
     }
   ],
-  "ratings": []
+  "ratings": [
+    {
+      "id": 1,
+      "bookId": 2,
+      "memberId": 1,
+      "ratingStars": 4,
+      "ratedAt": "2026-03-25T13:56:37.7781359Z"
+    },
+    {
+      "id": 2,
+      "bookId": 1,
+      "memberId": 1,
+      "ratingStars": 5,
+      "ratedAt": "2026-03-25T13:57:09.6967345Z"
+    },
+    {
+      "id": 3,
+      "bookId": 5,
+      "memberId": 2,
+      "ratingStars": 2,
+      "ratedAt": "2026-03-25T14:02:08.1872061Z"
+    }
+  ]
 }

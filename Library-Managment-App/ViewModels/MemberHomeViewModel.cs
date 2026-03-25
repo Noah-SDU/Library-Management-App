@@ -9,7 +9,7 @@ public class MemberHomeViewModel : ViewModelBase
     private int _currentLoansCount;
     private int _booksRatedCount;
 
-    public CatalogViewModel Catalog { get; }
+    public MemberCatalogViewModel Catalog { get; }
     public MyLoansViewModel MyLoans { get; }
 
     public int CurrentLoansCount
@@ -24,7 +24,7 @@ public class MemberHomeViewModel : ViewModelBase
         private set => SetProperty(ref _booksRatedCount, value);
     }
 
-    public MemberHomeViewModel(CatalogViewModel catalog, MyLoansViewModel myLoans, LibraryService libraryService)
+    public MemberHomeViewModel(MemberCatalogViewModel catalog, MyLoansViewModel myLoans, LibraryService libraryService)
     {
         Catalog = catalog;
         MyLoans = myLoans;

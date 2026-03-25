@@ -9,17 +9,27 @@ namespace Library_Managment_App.ViewModels;
 
 public class MemberLoanItemViewModel : ViewModelBase
 {
+	private const int LoanPeriodDays = 30;
+
 	public int BookId { get; }
 	public string BookTitle { get; }
 	public string BookIsbn { get; }
 	public string BorrowedAtText { get; }
+	public string DueDateText { get; }
+	public string LoanStatusText { get; }
+	public int? UserRating { get; }
+	public string UserRatingText => UserRating == null ? "Your rating: not rated" : $"Your rating: {UserRating}/5";
 
-	public MemberLoanItemViewModel(int bookId, string bookTitle, string bookIsbn, DateTime borrowedAt)
+	public MemberLoanItemViewModel(int bookId, string bookTitle, string bookIsbn, DateTime borrowedAt, int? userRating)
 	{
 		BookId = bookId;
 		BookTitle = bookTitle;
 		BookIsbn = bookIsbn;
 		BorrowedAtText = borrowedAt.ToLocalTime().ToString("yyyy-MM-dd HH:mm");
+		var dueDate = borrowedAt.AddDays(LoanPeriodDays);
+		DueDateText = $"Due: {dueDate.ToLocalTime():yyyy-MM-dd}";
+		LoanStatusText = dueDate < DateTime.UtcNow ? "Status: overdue" : "Status: on time";
+		UserRating = userRating;
 	}
 }
 
@@ -30,6 +40,7 @@ public class MyLoansViewModel : ViewModelBase
 
 	private int? _memberId;
 	private string _memberUsername = string.Empty;
+	private int _selectedRating = 5;
 	private MemberLoanItemViewModel? _selectedLoan;
 	private IList<object?> _selectedLoans = new List<object?>();
 	private string? _statusMessage;
@@ -56,17 +67,27 @@ public class MyLoansViewModel : ViewModelBase
 		set => SetProperty(ref _statusMessage, value);
 	}
 
+	public IReadOnlyList<int> RatingChoices { get; } = new[] { 1, 2, 3, 4, 5 };
+
+	public int SelectedRating
+	{
+		get => _selectedRating;
+		set => SetProperty(ref _selectedRating, value);
+	}
+
 	public bool HasLoans => Loans.Count > 0;
 
 	public bool NoLoans => Loans.Count == 0;
 
 	public ICommand ReturnSelectedBooksCommand { get; }
+	public ICommand RateSelectedBookCommand { get; }
 
 	public MyLoansViewModel(LibraryService libraryService, Action? persistChanges = null)
 	{
 		_libraryService = libraryService;
 		_persistChanges = persistChanges;
 		ReturnSelectedBooksCommand = new RelayCommand(ReturnSelectedBooks);
+		RateSelectedBookCommand = new RelayCommand(RateSelectedBook);
 	}
 
 	public void SetMemberContext(int? memberId, string? memberUsername = null)
@@ -112,7 +133,8 @@ public class MyLoansViewModel : ViewModelBase
 			{
 				var title = books.TryGetValue(loan.BookId, out var book) ? book.Title : $"Book #{loan.BookId}";
 				var isbn = books.TryGetValue(loan.BookId, out book) && !string.IsNullOrWhiteSpace(book.ISBN) ? book.ISBN : "N/A";
-				Loans.Add(new MemberLoanItemViewModel(loan.BookId, title, isbn, loan.BorrowedAt));
+				var userRating = _libraryService.GetUserRating(_memberId.Value, loan.BookId);
+				Loans.Add(new MemberLoanItemViewModel(loan.BookId, title, isbn, loan.BorrowedAt, userRating));
 			}
 		}
 
@@ -189,5 +211,37 @@ public class MyLoansViewModel : ViewModelBase
 		Refresh();
 		StateChanged?.Invoke(this, EventArgs.Empty);
 		_persistChanges?.Invoke();
+	}
+
+	private void RateSelectedBook()
+	{
+		if (_memberId == null)
+		{
+			StatusMessage = "Log in as a member to rate books.";
+			return;
+		}
+
+		if (SelectedLoan == null)
+		{
+			StatusMessage = "Select a loan to rate.";
+			return;
+		}
+
+		try
+		{
+			_libraryService.RateBook(_memberId.Value, SelectedLoan.BookId, SelectedRating);
+			StatusMessage = $"Rated \"{SelectedLoan.BookTitle}\" {SelectedRating}/5.";
+			Refresh();
+			StateChanged?.Invoke(this, EventArgs.Empty);
+			_persistChanges?.Invoke();
+		}
+		catch (ArgumentException ex)
+		{
+			StatusMessage = ex.Message;
+		}
+		catch (InvalidOperationException ex)
+		{
+			StatusMessage = ex.Message;
+		}
 	}
 }

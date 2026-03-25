@@ -27,31 +27,47 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public MainWindowViewModel(AuthService authService, LibraryService libraryService, Action? persistChanges = null)
     {
-        var catalog = new CatalogViewModel(libraryService, persistChanges);
+        var librarianCatalog = new LibrarianCatalogViewModel(libraryService, persistChanges);
+        var memberCatalog = new MemberCatalogViewModel(libraryService, persistChanges);
         var activeLoans = new ActiveLoansViewModel(libraryService);
         var myLoans = new MyLoansViewModel(libraryService, persistChanges);
 
-        LibrarianHome = new LibrarianHomeViewModel(catalog, activeLoans);
-        MemberHome = new MemberHomeViewModel(catalog, myLoans, libraryService);
+        LibrarianHome = new LibrarianHomeViewModel(librarianCatalog, activeLoans);
+        MemberHome = new MemberHomeViewModel(memberCatalog, myLoans, libraryService);
 
         Login = new LoginViewModel(authService);
         ReturnToLoginCommand = new RelayCommand(ReturnToLogin);
-        HookEvents(activeLoans, catalog, myLoans);
+        HookEvents(activeLoans, librarianCatalog, memberCatalog, myLoans);
     }
 
-    private void HookEvents(ActiveLoansViewModel activeLoans, CatalogViewModel catalog, MyLoansViewModel myLoans)
+    private void HookEvents(
+        ActiveLoansViewModel activeLoans,
+        LibrarianCatalogViewModel librarianCatalog,
+        MemberCatalogViewModel memberCatalog,
+        MyLoansViewModel myLoans)
     {
-        catalog.StateChanged += (_, _) =>
+        librarianCatalog.StateChanged += (_, _) =>
         {
             activeLoans.Refresh();
             myLoans.Refresh();
+            memberCatalog.RefreshBooks();
+            MemberHome.RefreshDashboardStats();
+        };
+
+        memberCatalog.StateChanged += (_, _) =>
+        {
+            activeLoans.Refresh();
+            myLoans.Refresh();
+            librarianCatalog.RefreshBooks();
+            memberCatalog.RefreshBooks();
             MemberHome.RefreshDashboardStats();
         };
 
         myLoans.StateChanged += (_, _) =>
         {
             activeLoans.Refresh();
-            catalog.RefreshBooks();
+            librarianCatalog.RefreshBooks();
+            memberCatalog.RefreshBooks();
             MemberHome.RefreshDashboardStats();
         };
 

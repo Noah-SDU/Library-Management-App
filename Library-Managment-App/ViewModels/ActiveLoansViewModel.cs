@@ -23,7 +23,7 @@ public class ActiveLoanItemViewModel : ViewModelBase
 public class ActiveLoansViewModel : ViewModelBase
 {
 	private readonly LibraryService _libraryService;
-	private const int OverdueDays = 14;
+	private const int OverdueDays = 30;
 	private int _activeLoanCount;
 	private int _overdueLoanCount;
 
